@@ -10,7 +10,7 @@ steps:
     publishWebProjects: true
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'ARM-Playground'
+    azureSubscription: 'Dotnet-SC'
     appType: 'webApp'
-    appName: 'fc-webapp'
+    appName: 'fc-web'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
