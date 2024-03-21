@@ -1,3 +1,6 @@
+pool:
+  name: agentpool
+  
 variables:
   buildConfiguration: 'Release'
 
