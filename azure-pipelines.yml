@@ -5,12 +5,19 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '3.x'  # Adjust the version as needed
+
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
     publishWebProjects: true
+
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Dotnet-SC'
