@@ -3,6 +3,9 @@ pool:
   
 variables:
   buildConfiguration: 'Release'
+  uatBackgroundColor: '#FFFF00'  # Yellow
+  devBackgroundColor: '#00FF00'  # Green
+  prodBackgroundColor: '#FF0000' # Red
 
 stages:
 - stage: UAT
@@ -28,6 +31,10 @@ stages:
         appType: 'webApp'
         appName: 'fc-web'
         package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+        appSettings: |
+          {
+            "BackgroundColor": "$(uatBackgroundColor)"
+          }
 
 - stage: DEV
   jobs:
@@ -52,6 +59,10 @@ stages:
         appType: 'webApp'
         appName: 'fc-web1'
         package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+        appSettings: |
+          {
+            "BackgroundColor": "$(devBackgroundColor)"
+          }
 
 - stage: PROD
   jobs:
@@ -76,4 +87,9 @@ stages:
         appType: 'webApp'
         appName: 'fc-web2'
         package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+        appSettings: |
+          {
+            "BackgroundColor": "$(prodBackgroundColor)"
+          }
+
 
