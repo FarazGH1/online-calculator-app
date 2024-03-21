@@ -3,9 +3,9 @@ pool:
   
 variables:
   buildConfiguration: 'Release'
-  uatBackgroundColor: '#FFFF00'  # Yellow
-  devBackgroundColor: '#00FF00'  # Green
-  prodBackgroundColor: '#FF0000' # Red
+  uatBackgroundColor: 'Red'
+  devBackgroundColor: 'White'
+  prodBackgroundColor: 'Green'
 
 stages:
 - stage: UAT
