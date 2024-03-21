@@ -50,7 +50,7 @@ stages:
       inputs:
         azureSubscription: 'Dotnet-SC'
         appType: 'webApp'
-        appName: 'fc-web1-dev'
+        appName: 'fc-web1'
         package: '$(System.DefaultWorkingDirectory)/**/*.zip'
 
 - stage: PROD
@@ -74,6 +74,6 @@ stages:
       inputs:
         azureSubscription: 'Dotnet-SC'
         appType: 'webApp'
-        appName: 'fc-web1-prod'
+        appName: 'fc-web2'
         package: '$(System.DefaultWorkingDirectory)/**/*.zip'
 
