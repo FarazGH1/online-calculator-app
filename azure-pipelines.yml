@@ -22,6 +22,6 @@ steps:
   inputs:
     azureSubscription: 'Dotnet-SC'
     appType: 'webApp'
-    appName: 'fc-web'
+    appName: 'DEV-FC'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
 
